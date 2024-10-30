@@ -1,0 +1,45 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+
+
+ .libreli-book{
+    
+ }
+
+.libreli-book:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media (min-width:991px){
+    
+    
+    .libreli-book__detail{
+        max-width: calc(100% - 377px);
+        float: left;        
+    }
+
+    .libreli-book--with-image .libreli-book__detail{
+        padding-left: 10px;
+    }
+
+    .libreli-book--with-image .libreli-book__img{
+        max-width: 377px;
+        float: left;
+        padding-right: 10px;
+    }
+}
+
+.libreli-book__label{
+    margin-bottom: 20px;
+}
+
+
+ .libreli-book select{
+    max-width: 337px;
+ }

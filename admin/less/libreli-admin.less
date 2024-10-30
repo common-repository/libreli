@@ -1,0 +1,329 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+
+/**
+ * Mixins
+ */
+
+.lbrty_clearfix {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+.lbrty_hide{
+    display: none;
+}
+
+.lbrty_pb0{
+    padding-bottom: 0 !important;
+}
+
+/**
+ * Components
+ */
+
+.lbrty_spinner_with_message{
+    .spinner{
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .spinner_msg{
+        float: none;
+        display: inline-block;
+        max-width: ~"calc(100% - 44px)";
+    }
+}
+
+
+/**
+ * License Card
+ */
+
+.lbrty-license-box {
+    max-width: 700px;
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+}
+
+.lbrty-license-box{
+
+    
+    .lbrty-card-upgrade-account{
+        display: none;
+    }
+    &.lbrty-license-box--free{
+        display: block;
+    }
+
+
+
+    .lbrty-view-key-button--close{
+        display: none;
+    }
+    .lbrty-view-key-button--open{
+        display: inline-block
+    }
+    &.open{
+        .lbrty-card-activate{
+            display: block !important;
+        }
+        .lbrty-view-key-button--close{
+            display: inline-block
+        }
+        .lbrty-view-key-button--open{
+            display: none;
+        }
+    }
+
+
+    .activated_label-just-active,
+    .activated_label-activated{
+        display: none;
+    }
+    .activated_label-inactive{
+        display: inline;
+    }
+
+
+    &.lbrty-license-box--just-activated{
+
+        .activated_label-activated,
+        .activated_label-inactive{
+            display: none;
+        }
+
+        .activated_label-just-active{
+            display: inline-block;
+        }
+
+        .lbrty-card-create-account{
+            display: none;
+        }
+
+    }
+
+
+
+    &.lbrty-license-box--activated {
+        .activated_label-just-active,
+        .activated_label-inactive{
+            display: none;
+        }
+        
+        .activated_label-activated{
+            display: inline-block;
+        }
+
+        .lbrty-card-create-account{
+            display: none;
+        }
+    }
+
+}
+
+.lbrty_add_new_book_container{
+    max-width: 740px;
+    // background: #fff;
+    margin: 20px 0;
+    // padding: 20px;
+    // box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    // align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.lbrty_button_with_icon{
+    .dashicons{
+        vertical-align: middle;
+        font-size: 17px;
+    }
+}
+
+.lbrty_get_max_num_books{
+    padding: 20px 0 10px;
+}
+
+.lbrty_next_scheduled{
+    padding: 10px 0;
+    .lbrty_next_scheduled__date{
+        font-weight: bold;
+    }
+}
+
+
+.lbrty-license-box.lbrty-license-box--activated{
+    // padding-bottom: 0;
+}
+
+.lbrty-license-box.lbrty-license-box--activated .lbrty-card-activate{
+    display: none;
+}
+
+.lbrty-license-box h2 {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    margin: -20px -20px 20px;
+    margin-bottom: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.lbrty-license-box  h2 span {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 5px;
+}
+
+.lbrty-activate-button{
+
+}
+
+.lbrty_activate_button_msg,
+.lbrty_deactivate_button_msg{
+    font-weight: bold;
+}
+
+
+.lbrty-card-sub-item{
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    overflow: hidden;
+}
+
+.lbrty-card-sub-sub-item{
+    padding-top: 20px;
+}
+
+.lbrty-card-sub-item h2{
+    display: none;
+}
+
+.card-sub-item.closed{
+    padding: 0;
+    max-height: 0;
+    border-bottom: 0;
+}
+
+/**
+ * Display Tab
+ */
+
+.lbrty_admin_form,
+.lbrty-advanced-options-form,
+.lbrty-display-options-form{
+    tr{
+        display: block;
+        position: relative;
+    }
+}
+
+.lbrty-cover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.26);
+    border: 1px solid #dcd;
+    margin-left: -8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.lbrty-description-premium-only{
+    color: red;
+}
+
+/**
+ * Advanced Tab
+ */
+
+
+
+/**
+ * Edit Book interface
+ */
+
+ #lbrty_run_initial_book_lookup{
+
+ }
+
+.lbrty_initial_lookup_progress,
+.lbrty_initial_lookup_msg,
+.lbrty_initial_lookup_notify{
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border: 2px solid #1e8bc3;
+    max-width: 600px;
+}
+
+.lbrty_initial_lookup_notify--noborder{
+    border: none;
+}
+
+.lbrty_initial_lookup_msg{
+    padding-top: 15px;
+}
+
+.lbrty_initial_lookup_progress{
+     &.hide{
+        display: none;
+    }
+    span{
+        float: left;
+        vertical-align: middle;
+    }
+    .lbrty_initial_progress_msg{
+        padding-top: 5px;
+    }
+}
+
+/**
+ *
+ */
+
+.lbrty-money-got-time{
+    padding-bottom: 7px;
+}
+
+.lbrty-money-pills{
+    display: inline-block;
+    padding: 0 10px;
+    margin-bottom: 7px;
+    margin-right: 7px;
+    /* background: #1e87f0; */
+    background: rgb(97, 97, 97);
+    line-height: 1.5;
+    font-size: 12px;
+    color: #fff;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+
+
